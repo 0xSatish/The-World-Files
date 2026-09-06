@@ -40,7 +40,7 @@
   --tilt-glare-fade: 300ms;
   --tilt-glare-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
-  /* Transitions.dev — Avatar group hover */
+  /* Transitions.dev  Avatar group hover */
   --avatar-lift: -4px;
   --avatar-dur: 320ms;
   --avatar-scale: 1.05;
@@ -115,9 +115,11 @@ a {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 50% 100%;
   }
@@ -239,6 +241,7 @@ a {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -281,23 +284,17 @@ a {
   mix-blend-mode: screen;
   border-radius: inherit;
   background:
-    radial-gradient(
-      circle 95px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+    radial-gradient(circle 95px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
       rgba(255, 255, 255, 0.48),
       rgba(255, 255, 255, 0.06) 52%,
-      rgba(255, 255, 255, 0) 84%
-    ),
-    radial-gradient(
-      circle 200px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+      rgba(255, 255, 255, 0) 84%),
+    radial-gradient(circle 200px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
       rgba(255, 255, 255, 0.22),
       rgba(255, 255, 255, 0.04) 58%,
-      rgba(255, 255, 255, 0) 78%
-    ),
-    radial-gradient(
-      circle 360px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+      rgba(255, 255, 255, 0) 78%),
+    radial-gradient(circle 360px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
       rgba(255, 255, 255, 0.10),
-      rgba(255, 255, 255, 0) 88%
-    );
+      rgba(255, 255, 255, 0) 88%);
   transition: opacity var(--tilt-glare-fade) var(--tilt-glare-ease);
   z-index: 30;
 }
@@ -311,23 +308,26 @@ a {
     transform: none !important;
     transition: none !important;
   }
+
   .t-tilt-glare {
     opacity: 0 !important;
     transition: none !important;
   }
 }
 
-/* Transitions.dev — Avatar group hover */
+/* Transitions.dev  Avatar group hover */
 .t-avatar {
   transform-origin: center;
   /* translateY before scale so scale doesn't amplify the lift offset. */
   transform:
-    translateY(var(--shift, 0px))
-    scale(var(--scale-active, 1));
+    translateY(var(--shift, 0px)) scale(var(--scale-active, 1));
   transition: transform var(--avatar-dur) var(--avatar-ease-in);
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .t-avatar { transition: none !important; transform: none !important; }
+  .t-avatar {
+    transition: none !important;
+    transform: none !important;
+  }
 }

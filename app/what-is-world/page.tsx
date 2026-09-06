@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What is World — Protocol Profile & Architecture — The World File",
+  title: "What is World  Protocol Profile & Architecture  The World File",
   description:
     "Comprehensive, independent editorial profile of World.xyz: Solana-native architecture, Phantom integration, outcome token mechanics, Chainlink oracles, fee structure, and security considerations.",
 };

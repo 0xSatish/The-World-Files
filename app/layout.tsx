@@ -20,7 +20,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "The World File — an unofficial desk for World",
+  title: "The World File  an unofficial desk for World",
   description:
     "An unofficial community file on World, the Solana prediction market. Guides, news, and a living archive. Not affiliated with world.xyz.",
 };

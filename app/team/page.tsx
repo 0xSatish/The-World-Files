@@ -5,7 +5,7 @@ import AvatarGroup from "@/components/AvatarGroup";
 import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
-  title: "Team & Affiliations — The World File",
+  title: "Team & Affiliations  The World File",
   description:
     "Directory of X affiliation badge holders, public mascots, and Solana-native accounts associated with World Prediction Markets.",
 };
@@ -76,15 +76,14 @@ export default function TeamPage() {
 
               {/* Grid Layout based on Section Importance */}
               <div
-                className={`grid gap-6 ${
-                  section.id === "official"
+                className={`grid gap-6 ${section.id === "official"
                     ? "grid-cols-1"
                     : section.id === "house-face"
-                    ? "grid-cols-1 md:grid-cols-1"
-                    : section.id === "first-wave"
-                    ? "grid-cols-1 md:grid-cols-2"
-                    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                }`}
+                      ? "grid-cols-1 md:grid-cols-1"
+                      : section.id === "first-wave"
+                        ? "grid-cols-1 md:grid-cols-2"
+                        : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                  }`}
               >
                 {sectionMembers.map((member) => (
                   <TeamCard key={member.id} member={member} />

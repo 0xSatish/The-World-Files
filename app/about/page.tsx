@@ -14,7 +14,7 @@ export default function About() {
         <p>
           The World File is an unofficial resource about World, the Solana
           prediction market. It exists because the product deserved a
-          useful reference beyond scattered threads — not because it has
+          useful reference beyond scattered threads  not because it has
           any relationship with world.xyz.
         </p>
 

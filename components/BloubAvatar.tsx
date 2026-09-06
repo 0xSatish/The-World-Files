@@ -557,8 +557,7 @@ export default function BloubAvatar({
           eyeLeftRef.current.setAttribute("d", eyePathD);
           eyeLeftRef.current.setAttribute(
             "transform",
-            `translate(${DEMI_VIEWBOX + eye1.x}, ${
-              DEMI_VIEWBOX + eye1.y
+            `translate(${DEMI_VIEWBOX + eye1.x}, ${DEMI_VIEWBOX + eye1.y
             }) matrix(${eye1.a.toFixed(4)}, ${eye1.b.toFixed(
               4
             )}, ${eye1.c.toFixed(4)}, ${eye1.d.toFixed(4)}, 0, 0)`
@@ -568,8 +567,7 @@ export default function BloubAvatar({
           eyeRightRef.current.setAttribute("d", eyePathD);
           eyeRightRef.current.setAttribute(
             "transform",
-            `translate(${DEMI_VIEWBOX + eye2.x}, ${
-              DEMI_VIEWBOX + eye2.y
+            `translate(${DEMI_VIEWBOX + eye2.x}, ${DEMI_VIEWBOX + eye2.y
             }) matrix(${eye2.a.toFixed(4)}, ${eye2.b.toFixed(
               4
             )}, ${eye2.c.toFixed(4)}, ${eye2.d.toFixed(4)}, 0, 0)`
@@ -882,7 +880,7 @@ export default function BloubAvatar({
           filter="url(#bloubGlow)"
         />
 
-        {/* Main Bloub Body — Iridescent Circular Silhouette */}
+        {/* Main Bloub Body  Iridescent Circular Silhouette */}
         <circle
           ref={bodyCircleRef}
           cx={DEMI_VIEWBOX}
