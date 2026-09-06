@@ -1,0 +1,21 @@
+---
+title: "Phantom switches to World for in-wallet prediction markets"
+date: 2026-06-01
+type: news
+layer: confirmed
+tags: [phantom, infrastructure]
+summary: "Phantom began routing in-wallet prediction markets opened from 1 June through World, replacing the Kalshi setup that had run since December 2025."
+sources:
+  - { label: "press", outlet: "Solana Compass", title: "Phantom's Disclosure Page Reveals World Prediction Markets as Its Solana Infrastructure Provider", date: "2026-06-30", url: "https://solanacompass.com" }
+  - { label: "press", outlet: "Genfinity", title: "World Emerges as Solana's Prediction Market Powering Phantom with Chainlink Oracles", date: "2026-07-01", url: "https://genfinity.io" }
+  - { label: "press", outlet: "The Defiant", title: "World Launches Onchain Prediction Market on Solana Through Phantom", date: "2026-07-01", url: "https://thedefiant.io" }
+  - { label: "press", outlet: "CoinShares", title: "Hyperliquid and Solana: Indirect Exposure to Prediction Markets", date: "2026-07-01", url: "https://coinshares.com" }
+---
+
+Starting 1 June 2026, prediction markets opened inside Phantom were no longer routed through Kalshi. The new infrastructure provider was World Prediction Markets, a non-custodial protocol on Solana. The switch was quiet. No announcement, no launch event. Phantom users trading event contracts just started interacting with a different system underneath.
+
+The prior setup had run since December 2025 via DFlow, connecting Phantom to Kalshi's order book. The new World integration kept the same in-wallet experience but moved the execution layer entirely onchain. Positions became SPL tokens sitting directly in the user's wallet, not custodied by a third party.
+
+Phantom's own language for the new setup describes World as a non-custodial prediction-markets protocol that provides order routing to liquidity providers on Solana. That routing distinction matters: World handles the matching and settlement infrastructure, while Phantom remains the frontend.
+
+The cutover was only confirmed publicly weeks later, when Phantom's disclosure page named World as the provider. At the time, most users had no idea the underlying infrastructure had changed. CoinShares later summarized it as Solana becoming a distribution rail for prediction markets, not only a venue.

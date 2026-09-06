@@ -1,0 +1,22 @@
+---
+title: "How resolution and oracles are described publicly"
+date: 2026-08-05
+type: guide
+tags: [oracles, resolution]
+summary: "What happens between 'the event occurred' and 'the market pays out'  as far as public information goes."
+---
+
+Resolution is the step most people skip past when learning a prediction market, but it's the part that determines whether the whole system can be trusted.
+
+## The general pattern
+
+1. A market is created with clear resolution criteria stated upfront
+2. The event happens in the real world
+3. An oracle brings that outcome onchain in a verifiable way
+4. The smart contract pays out the winning side automatically
+
+## World's public position
+
+World uses Chainlink as oracle infrastructure, which fits the general pattern above  an external, verifiable data feed rather than a single internal decision-maker. Beyond that, World hasn't published deep technical documentation on dispute processes or edge cases, at least not that's part of the public record we're tracking.
+
+We'll update this page as more becomes public. See [Chainlink as World's oracle layer](/news/2026-08-chainlink-oracle) for the news-side coverage of this.

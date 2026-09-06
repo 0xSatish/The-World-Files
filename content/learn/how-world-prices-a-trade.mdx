@@ -1,0 +1,40 @@
+---
+title: "How World actually prices a trade"
+date: 2026-07-22
+type: guide
+layer: research
+tags: [architecture, research]
+summary: "Independent research describes a complete-set vault, DFlow RFQ pricing through named market makers, Token-2022 YES/NO pairs, and CASH collateral  not a Polymarket-style public order book."
+sources:
+  - { label: "independent", outlet: "Dune (@ario_57_team)", title: "World.xyz Prediction Market dashboard", date: "2026-07-15", url: "https://dune.com/ario_57_team/worldxyz-prediction-market" }
+  - { label: "independent", outlet: "Chainstack", title: "World.xyz vs Polymarket: on-chain prediction markets", date: "2026-07-22", url: "https://chainstack.com/world-xyz-vs-polymarket" }
+  - { label: "independent", outlet: "Chainstack Labs", title: "research repo", date: "2026-07-22", url: "https://github.com/chainstacklabs/world-xyz-research" }
+---
+
+This is independent, unofficial research. Everything below is sourced from Chainstack's published analysis and the Dune community dashboard, not from World's own documentation. World has not published a public technical whitepaper or architecture spec as of this writing.
+
+## The complete-set vault
+
+The core mechanic is the same primitive as Polymarket: 1 unit of stablecoin mints 1 YES token and 1 NO token. The winner redeems 1:1. If you hold the YES token and the outcome resolves YES, you get your unit of collateral back. If it resolves NO, the NO holder does.
+
+The collateral in World's case is CASH  the stablecoin issued by Bridge (Stripe's crypto infrastructure arm). Not USDC, not SOL. CASH.
+
+## No public order book
+
+This is where World diverges from Polymarket most visibly. Polymarket runs a public central limit order book (CLOB) on Polygon. World does not. Pricing is request-for-quote (RFQ) routed through DFlow to market makers.
+
+Two market makers were identified in the Chainstack research: JanusFI, which appears to be in-house (it shares an upgrade key with the market program), and BisonFI, which operates independently. The embedded maker spread was described as roughly 2-3%.
+
+## Token structure
+
+Outcome tokens are Solana Token-2022 YES/NO pairs. The core program identified in the research was named "prediCt." Programs are upgradeable.
+
+## Resolution
+
+Resolution is written onchain by an operator key. Chainlink is described as feeding that process offchain  the data comes from Chainlink, but the onchain resolution action is executed by a World-controlled key. There is no UMA-style dispute window in this model. Once the operator writes the resolution, it is final.
+
+## What this means
+
+World's architecture is closer to an OTC desk than a public exchange. The user experience is seamless  you tap YES or NO and get a price  but behind that interface is an RFQ flow, not a visible order book. Whether that is better or worse depends on what you value: simplicity and tight spreads for retail, or full price discovery and limit-order flexibility for active traders. Polymarket gives you the latter. World gives you the former.
+
+This research is dated July 2026. Architecture may change. Confirm current behavior inside Phantom or at world.xyz.

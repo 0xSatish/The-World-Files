@@ -1,0 +1,24 @@
+---
+title: "YES vs NO: how a World contract actually works"
+date: 2026-07-12
+type: guide
+tags: [basics]
+summary: "The mechanics of a single trade  what you're buying, and what happens when the market resolves."
+---
+
+Every World market boils down to one question with two possible outcomes. You're not picking a team from a menu  you're buying a contract tied to one side of that question.
+
+## The two sides
+
+- **YES contract**  pays out if the stated outcome happens
+- **NO contract**  pays out if it doesn't
+
+Both are standard SPL tokens, which is what makes them composable with other Solana products rather than locked inside World's own interface.
+
+## What happens at resolution
+
+When the event resolves, the winning side's contracts become redeemable for their settlement value, and the losing side's contracts become worthless. Settlement has been associated with Phantom's CASH stablecoin.
+
+## What you're not doing
+
+You're not depositing funds with World and trusting them to pay you later. Your wallet signs the trade, holds the resulting token, and redeems it  World never holds your funds or your position at any point. See [Why self-custodial matters](/learn/self-custody-explained) for why that distinction matters.

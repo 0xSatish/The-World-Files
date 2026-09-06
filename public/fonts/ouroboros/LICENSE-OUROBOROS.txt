@@ -1,0 +1,7 @@
+Ouroboros Typeface
+------------------
+Designed by Ariel Martín Pérez with contributions from H·Alix Sanyas.
+Published by Velvetyne Type Foundry (https://velvetyne.fr/fonts/ouroboros/).
+Released under the SIL Open Font License (OFL) Version 1.1.
+
+Permissions: Free for personal and commercial use, modification, and redistribution under the terms of the SIL Open Font License.
