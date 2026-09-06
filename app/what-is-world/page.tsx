@@ -363,31 +363,7 @@ export default function WhatIsWorld() {
           </div>
         </section>
 
-        {/* Public X Snapshot & Domain Scan */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-white/[0.08]">
-          <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.08] space-y-3">
-            <div className="text-xs font-mono text-accent uppercase tracking-wider">
-              X PROFILE SNAPSHOT (@world_xyz)
-            </div>
-            <ul className="text-[13px] font-mono text-ink-dim space-y-1.5">
-              <li><span className="text-ink">Account:</span> @world_xyz</li>
-              <li><span className="text-ink">Joined:</span> December 2023</li>
-              <li><span className="text-ink">Based:</span> United States</li>
-              <li><span className="text-ink">Followers:</span> ~68K (Snapshot)</li>
-              <li><span className="text-ink">Posts:</span> ~7.1K (Snapshot)</li>
-              <li><span className="text-ink">Username History:</span> 3 changes (latest June 2026)</li>
-            </ul>
-          </div>
 
-          <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.08] space-y-3">
-            <div className="text-xs font-mono text-cyan-400 uppercase tracking-wider">
-              SECURITY DOMAIN SCAN SNAPSHOT
-            </div>
-            <p className="text-[13px] font-sans text-ink-dim leading-relaxed">
-              Domain <strong className="font-mono text-ink">world.xyz</strong> was audited against major web3 security blacklists (MetaMask, Phantom, ScamSniffer, EtherAddressLookup, Keplr) and was not flagged at the time of check.
-            </p>
-          </div>
-        </section>
 
         {/* Pros & Cons Summary Table */}
         <section className="space-y-6 pt-6 border-t border-white/[0.08]">
