@@ -191,6 +191,9 @@ const EXPRESSIONS: ExpressionConfig[] = [
     yawOffset: 0,
     pitchOffset: -6,
     rollOffset: -12,
+    isAngryBrows: true,
+    color: "#ef4444",
+    shakeAmount: 3.5,
   },
   {
     name: "angry-brows",
@@ -686,15 +689,17 @@ export default function BloubAvatar({
         console.log(`[Bloub DEBUG] actual active expression: ${currentExprName}`);
       }
 
-      // Handle Red Color shift during angry-brows
+      // Authoritative Red Color State during Angry Expression (Zero Green Flash)
+      const isAngryActive =
+        activeExprIndex >= 0 &&
+        (EXPRESSIONS[activeExprIndex].name === "angry" ||
+          EXPRESSIONS[activeExprIndex].name === "angry-brows" ||
+          !!EXPRESSIONS[activeExprIndex].isAngryBrows);
+
       if (bodyCircleRef.current && glowCircleRef.current) {
-        if (angryIntensity > 0.01) {
-          const r = Math.round(lerp(16, 239, angryIntensity));
-          const g = Math.round(lerp(185, 68, angryIntensity));
-          const b = Math.round(lerp(129, 68, angryIntensity));
-          const angryColor = `rgb(${r}, ${g}, ${b})`;
-          bodyCircleRef.current.setAttribute("fill", angryColor);
-          glowCircleRef.current.setAttribute("fill", angryColor);
+        if (isAngryActive) {
+          bodyCircleRef.current.setAttribute("fill", "#ef4444");
+          glowCircleRef.current.setAttribute("fill", "#ef4444");
         } else {
           bodyCircleRef.current.setAttribute("fill", "url(#bloubIridescentGrad)");
           glowCircleRef.current.setAttribute("fill", "url(#bloubGlowGrad)");
